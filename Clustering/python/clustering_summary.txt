@@ -1,0 +1,81 @@
+================================================================================
+K-MEANS CLUSTERING ANALYSIS - CP610 DELIVERABLE #4
+================================================================================
+
+PROJECT REQUIREMENTS:
+--------------------------------------------------------------------------------
+• Cluster 20% of randomly selected customers
+• Based on: Number of Transactions and Total Spent
+• Using K-Means algorithm
+• Experiment with different K values and pick the best
+• Explain what the clusters represent (give them names)
+
+================================================================================
+PART 1: EXPERIMENTING WITH DIFFERENT K VALUES
+================================================================================
+
+Tested K values from 2 to 10. Results:
+
+K     Inertia         Silhouette      Davies-Bouldin 
+--------------------------------------------------------------------------------
+2     213.59          0.3965          0.9733          <-- BEST
+3     148.43          0.3576          0.9699         
+4     111.16          0.3776          0.8362         
+5     84.13           0.3837          0.8385         
+6     70.91           0.3812          0.8214         
+7     61.25           0.3849          0.7496         
+8     53.83           0.3696          0.8350         
+9     48.45           0.3418          0.8952         
+10    43.15           0.3490          0.8384         
+
+================================================================================
+BEST K SELECTED: 2
+================================================================================
+
+Why K=2 was chosen:
+  • Highest Silhouette Score: 0.3965
+    (Silhouette measures cluster quality: -1 to 1, higher is better)
+  • Davies-Bouldin Index: 0.9733
+    (Davies-Bouldin measures separation: lower is better)
+  • K=2 provides optimal balance of cluster cohesion and separation
+
+================================================================================
+PART 2: CLUSTER INTERPRETATIONS (WHAT EACH CLUSTER REPRESENTS)
+================================================================================
+
+Cluster 0: VIP High-Value Customers
+--------------------------------------------------------------------------------
+Size: 81 customers (40.5% of sample)
+Average Transactions: 29.4
+Average Total Spent: $35,630.95
+
+What this cluster represents:
+  → Premium customers who shop frequently AND spend the most money.
+  → These are your most valuable customers.
+
+Recommended Marketing Action:
+  → Retain with VIP loyalty programs and exclusive offers
+  → Priority customer service and early access to new products
+
+Cluster 1: Occasional Customers
+--------------------------------------------------------------------------------
+Size: 119 customers (59.5% of sample)
+Average Transactions: 22.0
+Average Total Spent: $16,758.79
+
+What this cluster represents:
+  → Occasional shoppers with low engagement and spending.
+  → At-risk customers or new customers still exploring.
+
+Recommended Marketing Action:
+  → Activation campaigns with promotional offers
+  → Welcome series for new customers to drive repeat purchases
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+Total customers in analysis: 200
+Number of clusters: 2
+Features used: Number of Transactions, Total Spent
+Final model quality (Silhouette): 0.3965
