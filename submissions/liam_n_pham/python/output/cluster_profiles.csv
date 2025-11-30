@@ -1,0 +1,3 @@
+Cluster,Cluster_Size,Number_of_Transactions_mean,Number_of_Transactions_median,Number_of_Transactions_min,Number_of_Transactions_max,Total_Spent_mean,Total_Spent_median,Total_Spent_min,Total_Spent_max,Cluster_Name
+0,81,29.44,29.0,21,41,35630.95,33726.37,8341.07,61773.4,High Value Customers
+1,119,22.02,22.0,13,31,16758.79,16381.56,1549.07,39924.72,Occasional Customers

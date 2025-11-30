@@ -131,7 +131,7 @@ def save_artifacts(pred_df: pd.DataFrame, best_d: int, best_lr: float, out_dir: 
 def main():
     base_dir = Path(__file__).resolve().parent.parent # base directory
     workbook = base_dir / 'D4_work.xlsx' # path to the Excel workbook
-    out_dir = base_dir / 'output' # output directory for artifacts
+    out_dir = base_dir / 'python' / 'output' # output directory for artifacts
 
     monthly = load_monthly_sales(workbook) # load and preprocess monthly sales data
     train_df, test_df, X_train, y_train, X_test, y_test = split_train_test(monthly) # split into train/test sets
